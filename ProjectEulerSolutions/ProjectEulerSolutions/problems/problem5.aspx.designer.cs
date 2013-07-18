@@ -10,7 +10,7 @@
 namespace ProjectEulerSolutions.problems {
     
     
-    public partial class problem1 {
+    public partial class problem5 {
         
         /// <summary>
         /// Control form1.

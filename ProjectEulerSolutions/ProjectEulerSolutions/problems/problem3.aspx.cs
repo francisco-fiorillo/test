@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using auxLibrary;
 
 namespace ProjectEulerSolutions.problems
 {
@@ -18,7 +19,7 @@ namespace ProjectEulerSolutions.problems
 
             while (currentNumberValue > 1)
             {
-                if (!isPrime(currentDivisor))
+                if (!auxMethods.isPrime(currentDivisor))
                 {
                     currentDivisor++;
                     continue;
@@ -37,14 +38,6 @@ namespace ProjectEulerSolutions.problems
             ltrlResult.Text = "The largest prime factor of: " + NUMBER_TO_FACTORIZE + " is: " + currentDivisor;
         }
 
-        private bool isPrime(ulong x)
-        {
-            for (ulong i = 2; i < x; i++)
-            {
-                if (x % i == 0)
-                    return false;
-            }
-            return true;
-        }
+        
     }
 }

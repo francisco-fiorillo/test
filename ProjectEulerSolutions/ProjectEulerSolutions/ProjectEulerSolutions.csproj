@@ -56,6 +56,8 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="problems\problem6.aspx" />
+    <Content Include="problems\problem5.aspx" />
     <Content Include="problems\problem4.aspx" />
     <Content Include="problems\problem3.aspx" />
     <Content Include="problems\problem1.aspx" />
@@ -120,6 +122,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="problems\problem6.aspx.cs">
+      <DependentUpon>problem6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="problems\problem6.aspx.designer.cs">
+      <DependentUpon>problem6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="problems\problem5.aspx.cs">
+      <DependentUpon>problem5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="problems\problem5.aspx.designer.cs">
+      <DependentUpon>problem5.aspx</DependentUpon>
+    </Compile>
     <Compile Include="problems\problem4.aspx.cs">
       <DependentUpon>problem4.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -163,6 +179,12 @@
   <ItemGroup>
     <Content Include="Account\Web.config" />
     <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\auxLibrary\auxLibrary.csproj">
+      <Project>{2AA2BB17-5092-40F0-8133-422F6BCBC4CA}</Project>
+      <Name>auxLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
