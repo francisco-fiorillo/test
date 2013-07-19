@@ -7,17 +7,26 @@ namespace auxLibrary
 {
     public static class auxMethods
     {
-        public static bool isPrime(ulong x)
+        /// <summary>
+        /// Determines if a given number is prime.
+        /// </summary>
+        /// <param name="num">number to test</param>
+        /// <returns>True if prime. False if not prime</returns>
+        public static bool isPrime(ulong num)
         {
-            for (ulong i = 2; i < x; i++)
+            for (ulong i = 2; i < num; i++)
             {
-                if (x % i == 0)
+                if (num % i == 0)
                     return false;
             }
             return true;
         }
 
-        /* Calculates the Least Common Multiple*/
+        /// <summary>
+        /// Calculates the Least Common Multiple
+        /// </summary>
+        /// <param name="lstNumbers">List of numbers from which the LCM will be calculated</param>
+        /// <returns>the LCM of the number list</returns>
         public static ulong calculateLCM(List<ulong> lstNumbers)
         {
             System.Diagnostics.Stopwatch swLCM = System.Diagnostics.Stopwatch.StartNew();            
@@ -66,5 +75,20 @@ namespace auxLibrary
             System.Diagnostics.Debug.WriteLine("Elapsed time: " + swLCM.Elapsed);
             return resultLCM;
         }
+
+        public static ulong summation(ulong initial, ulong final, Func<ulong, ulong> sumFunction)
+        {
+            if (initial > final)
+                throw new Exception("The initial value must be smaller or equal to the final value");
+
+            ulong result = 0;
+
+            for (ulong i = initial; i <= final; i++)
+            {
+                result += sumFunction(i);
+            }
+            return result;
+        }
+
     }
 }

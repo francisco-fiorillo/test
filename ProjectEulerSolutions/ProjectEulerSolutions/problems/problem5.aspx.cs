@@ -36,7 +36,7 @@ namespace ProjectEulerSolutions.problems
             sw1.Stop();
             ltrlResult.Text = "The smallest number evenly divisible by 1 to 20 is: " + currentNumber + ". Time elapsed: " + sw1.Elapsed;
 
-            /* Method 2*/
+            /* Method 2 - Finding the LCM*/
             Stopwatch sw2 = Stopwatch.StartNew();
             List<ulong> lstNumbersToCalulateLCM = new List<ulong>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
             ulong LCMResult = auxMethods.calculateLCM(lstNumbersToCalulateLCM);
