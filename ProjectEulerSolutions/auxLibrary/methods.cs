@@ -14,6 +14,11 @@ namespace auxLibrary
         /// <returns>True if prime. False if not prime</returns>
         public static bool isPrime(ulong num)
         {
+            //Even numbers are not prime
+            if (num > 5 && (num % 2 == 0 || num % 3 == 0 || num % 5 == 0))
+                return false;
+
+
             for (ulong i = 2; i < num; i++)
             {
                 if (num % i == 0)
@@ -90,5 +95,19 @@ namespace auxLibrary
             return result;
         }
 
+        public static uint power(uint baseNum, uint exp)
+        {                        
+            if (exp == 0)
+                return 1;
+
+            uint result = baseNum;
+            
+            for (uint i = 0; i < exp; i++)
+            {
+                result *= result;
+            }
+
+            return result;
+        }
     }
 }
