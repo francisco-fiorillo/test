@@ -12,17 +12,38 @@ namespace ProjectEulerSolutions.problems
         protected void Page_Load(object sender, EventArgs e)
         {
             ulong result = 0;
-            ulong maxVaule = 2000000;
+            int maxVaule = 2000000;
+            //int maxVaule = 10;
 
-            for (ulong i = 2; i <= maxVaule; i++)
+            int[] basePrimes = {2};
+
+            List<int> lstPrimes = new List<int>(basePrimes);
+
+            for (int i = 3; i <= maxVaule; i++)
             {
-                if (auxMethods.isPrime(i))
+                bool isPrime = false;
+                foreach (int prime in lstPrimes)
                 {
-                    result += i;
+                    if (i % prime == 0)
+                        break;
+
+                    if (prime == lstPrimes.Last())
+                        isPrime = true;
                 }
 
+                if (isPrime)
+                {
+                    lstPrimes.Add(i);
+                    //Reset the flag
+                    isPrime = false;
+                }
             }
-            ltrlResult.Text = "The sum of the prime numbers under " + maxVaule + "is: " + result;
+
+            foreach(int prime in lstPrimes)
+            {
+                result += (ulong)prime;
+            }
+            ltrlResult.Text = "The sum of the prime numbers under " + maxVaule + " is: " + result;
         }
     }
 }

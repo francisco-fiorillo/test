@@ -14,8 +14,8 @@ namespace ProjectEulerSolutions.problems
         {
             ulong summationOfSquares, squareOfSummation, result;
 
-            summationOfSquares = auxMethods.summation(1, 100, x => x * x);
-            squareOfSummation = auxMethods.summation(1, 100, x => x) * auxMethods.summation(1, 100, x => x);
+            summationOfSquares = auxMethods.summation ((ulong)1, (ulong)100, x => x * x);
+            squareOfSummation = auxMethods.summation((ulong)1, (ulong)100, x => x) * auxMethods.summation((ulong)1, (ulong)100, x => x);
 
             result = squareOfSummation - summationOfSquares;
 

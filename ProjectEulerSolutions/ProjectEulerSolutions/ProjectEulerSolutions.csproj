@@ -56,6 +56,9 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="files\p11_grid.txt" />
+    <Content Include="problems\problem12.aspx" />
+    <Content Include="problems\problem11.aspx" />
     <Content Include="problems\problem10.aspx" />
     <Content Include="problems\problem9.aspx" />
     <Content Include="problems\problem8.aspx" />
@@ -125,6 +128,20 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="problems\problem12.aspx.cs">
+      <DependentUpon>problem12.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="problems\problem12.aspx.designer.cs">
+      <DependentUpon>problem12.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="problems\problem11.aspx.cs">
+      <DependentUpon>problem11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="problems\problem11.aspx.designer.cs">
+      <DependentUpon>problem11.aspx</DependentUpon>
     </Compile>
     <Compile Include="problems\problem10.aspx.cs">
       <DependentUpon>problem10.aspx</DependentUpon>

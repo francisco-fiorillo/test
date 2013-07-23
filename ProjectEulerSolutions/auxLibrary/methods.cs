@@ -34,7 +34,7 @@ namespace auxLibrary
         /// <returns>the LCM of the number list</returns>
         public static ulong calculateLCM(List<ulong> lstNumbers)
         {
-            System.Diagnostics.Stopwatch swLCM = System.Diagnostics.Stopwatch.StartNew();            
+            //System.Diagnostics.Stopwatch swLCM = System.Diagnostics.Stopwatch.StartNew();            
             ulong resultLCM = 1;
 
             //object that stores a list of prime factors
@@ -76,11 +76,18 @@ namespace auxLibrary
             }
 
             lstPrimes.ForEach(x => resultLCM *= (ulong)Math.Pow((double)x.primeNumber, (double)x.multiplier));
-            swLCM.Stop();
-            System.Diagnostics.Debug.WriteLine("Elapsed time: " + swLCM.Elapsed);
+            //swLCM.Stop();
+            //System.Diagnostics.Debug.WriteLine("Elapsed time: " + swLCM.Elapsed);
             return resultLCM;
         }
 
+        /// <summary>
+        /// Calculates the summation of a given function.
+        /// </summary>
+        /// <param name="initial">intial number for the summation</param>
+        /// <param name="final">limit number for the summation</param>
+        /// <param name="sumFunction">function to do the summation</param>
+        /// <returns></returns>
         public static ulong summation(ulong initial, ulong final, Func<ulong, ulong> sumFunction)
         {
             if (initial > final)
@@ -95,6 +102,26 @@ namespace auxLibrary
             return result;
         }
 
+        public static int summation(int initial, int final, Func<int, int> sumFunction)
+        {
+            if (initial > final)
+                throw new Exception("The initial value must be smaller or equal to the final value");
+
+            int result = 0;
+
+            for (int i = initial; i <= final; i++)
+            {
+                result += sumFunction(i);
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// Returns the power of a number
+        /// </summary>
+        /// <param name="baseNum">base number</param>
+        /// <param name="exp">exponent</param>
+        /// <returns></returns>
         public static uint power(uint baseNum, uint exp)
         {                        
             if (exp == 0)
