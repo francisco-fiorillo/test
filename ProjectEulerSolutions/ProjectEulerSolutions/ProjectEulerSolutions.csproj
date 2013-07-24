@@ -57,6 +57,8 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="files\p11_grid.txt" />
+    <Content Include="files\p13_numbers.txt" />
+    <Content Include="problems\problem13.aspx" />
     <Content Include="problems\problem12.aspx" />
     <Content Include="problems\problem11.aspx" />
     <Content Include="problems\problem10.aspx" />
@@ -128,6 +130,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="problems\problem13.aspx.cs">
+      <DependentUpon>problem13.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="problems\problem13.aspx.designer.cs">
+      <DependentUpon>problem13.aspx</DependentUpon>
     </Compile>
     <Compile Include="problems\problem12.aspx.cs">
       <DependentUpon>problem12.aspx</DependentUpon>
