@@ -27,6 +27,37 @@ namespace auxLibrary
             return true;
         }
 
+        public static bool isPrime(int num)
+        {
+            //Even numbers are not prime
+            if (num > 5 && (num % 2 == 0 || num % 3 == 0 || num % 5 == 0))
+                return false;
+
+
+            for (int i = 2; i < num; i++)
+            {
+                if (num % i == 0)
+                    return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Finds the first larger prime than the given number
+        /// </summary>
+        /// <param name="num">number to find the first larger prime from</param>
+        /// <returns></returns>
+        public static int findNextPrime(int num)
+        {
+            num += 1;
+            while (!isPrime(num))
+            {
+                num++;
+            }
+
+            return num;
+        }
+
         /// <summary>
         /// Calculates the Least Common Multiple
         /// </summary>
@@ -113,6 +144,21 @@ namespace auxLibrary
             {
                 result += sumFunction(i);
             }
+            return result;
+        }
+
+        /// <summary>
+        /// Special case of summation for "summation from 1 to final of x"
+        /// </summary>
+        /// <param name="final">Limit value to summate</param>
+        /// <returns></returns>
+        public static int summation(int final)
+        {
+            if (final < 1)
+                throw new Exception("The final value must be bigger than 0");
+
+            //Summation from 1 to "x"
+            int result = final*(final+1)/2;
             return result;
         }
 
