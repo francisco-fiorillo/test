@@ -182,5 +182,18 @@ namespace auxLibrary
 
             return result;
         }
+
+        /// <summary>
+        /// Calculates the factorial n! of a number n
+        /// </summary>
+        /// <param name="num">Number to calculate the factorial for</param>
+        /// <returns>the factorial N!</returns>
+        public static ulong factorial(ulong n)
+        {
+            if (n == 0 || n == 1)
+                return 1;
+            
+            return n * factorial(n-1);
+        }
     }
 }
