@@ -175,9 +175,9 @@ namespace auxLibrary
 
             uint result = baseNum;
             
-            for (uint i = 0; i < exp; i++)
+            for (uint i = 1; i < exp; i++)
             {
-                result *= result;
+                result *= baseNum;
             }
 
             return result;
