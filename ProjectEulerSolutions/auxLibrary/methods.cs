@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Numerics;
 
 namespace auxLibrary
 {
@@ -69,7 +70,7 @@ namespace auxLibrary
             ulong resultLCM = 1;
 
             //object that stores a list of prime factors
-            List<primeFactor> lstPrimes = new List<primeFactor>();
+            List<PrimeFactor> lstPrimes = new List<PrimeFactor>();
 
             foreach (ulong num in lstNumbers)
             {
@@ -92,12 +93,12 @@ namespace auxLibrary
                         //only add the prime number to the prime factors list if it doesnt already exist or if the multiplier is smaller than the current (and greater than 0).
                         if (!lstPrimes.Exists(x => x.primeNumber == currentPrimeCheck) && primeMultiplier > 0)
                         {
-                            lstPrimes.Add(new primeFactor(currentPrimeCheck, primeMultiplier));
+                            lstPrimes.Add(new PrimeFactor(currentPrimeCheck, primeMultiplier));
                         }
 
                         else if (lstPrimes.Exists(x => x.primeNumber == currentPrimeCheck && x.multiplier < primeMultiplier))
                         {
-                            primeFactor primeFactorItem = lstPrimes.FirstOrDefault(x => x.primeNumber == currentPrimeCheck);
+                            PrimeFactor primeFactorItem = lstPrimes.FirstOrDefault(x => x.primeNumber == currentPrimeCheck);
 
                             //I only need to update to the new greater multiplier.
                             primeFactorItem.multiplier = primeMultiplier;
@@ -175,6 +176,21 @@ namespace auxLibrary
 
             uint result = baseNum;
             
+            for (uint i = 1; i < exp; i++)
+            {
+                result *= baseNum;
+            }
+
+            return result;
+        }
+
+        public static BigInteger power(BigInteger baseNum, uint exp)
+        {
+            if (exp == 0)
+                return 1;
+
+            BigInteger result = baseNum;
+
             for (uint i = 1; i < exp; i++)
             {
                 result *= baseNum;

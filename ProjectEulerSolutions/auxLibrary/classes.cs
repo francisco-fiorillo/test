@@ -5,15 +5,27 @@ using System.Text;
 
 namespace auxLibrary
 {
-    public class primeFactor
+    public class PrimeFactor
     {
-        public primeFactor(ulong primeNumber, ulong multiplier)
+        public ulong primeNumber { get; set; }
+        public ulong multiplier { get; set; }
+
+        public PrimeFactor(ulong primeNumber, ulong multiplier)
         {
             this.primeNumber = primeNumber;
             this.multiplier = multiplier;
-        }
+        }        
+    }
 
-        public ulong primeNumber { get; set; }
-        public ulong multiplier { get; set; }
+    public class NumberWithName
+    {
+        public int number { get; set; }
+        public string name { get; set; }
+
+        public NumberWithName(int number, string name)
+        {
+            this.number = number;
+            this.name = name;
+        }
     }
 }

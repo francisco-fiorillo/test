@@ -38,6 +38,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -58,6 +59,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="files\p11_grid.txt" />
     <Content Include="files\p13_numbers.txt" />
+    <Content Include="problems\problem17.aspx" />
     <Content Include="problems\problem16.aspx" />
     <Content Include="problems\problem15.aspx" />
     <Content Include="problems\problem14.aspx" />
@@ -133,6 +135,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="problems\problem17.aspx.cs">
+      <DependentUpon>problem17.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="problems\problem17.aspx.designer.cs">
+      <DependentUpon>problem17.aspx</DependentUpon>
     </Compile>
     <Compile Include="problems\problem16.aspx.cs">
       <DependentUpon>problem16.aspx</DependentUpon>
