@@ -60,6 +60,7 @@
     <Content Include="files\p11_grid.txt" />
     <Content Include="files\p13_numbers.txt" />
     <Content Include="files\p18_pyramid.txt" />
+    <Content Include="problems\problem19.aspx" />
     <Content Include="problems\problem18.aspx" />
     <Content Include="problems\problem17.aspx" />
     <Content Include="problems\problem16.aspx" />
@@ -137,6 +138,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="problems\problem19.aspx.cs">
+      <DependentUpon>problem19.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="problems\problem19.aspx.designer.cs">
+      <DependentUpon>problem19.aspx</DependentUpon>
     </Compile>
     <Compile Include="problems\problem18.aspx.cs">
       <DependentUpon>problem18.aspx</DependentUpon>
